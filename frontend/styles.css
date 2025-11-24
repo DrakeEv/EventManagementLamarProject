@@ -3,8 +3,35 @@ h1 {
     padding-top: 50px;
 }
 
-.description {
+.Description {
     font-size: 18px;
     margin: 20px;
     text-align: center;
+}
+
+.add_event_button{
+    display: flex;
+    justify-content: center;
+}
+
+.add-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    border: none;
+    background-color: #C8102E;      /* Bootstrap primary blue */
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Hover effect */
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
