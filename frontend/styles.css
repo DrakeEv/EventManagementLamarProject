@@ -1,0 +1,10 @@
+h1 { 
+    text-align: center;
+    padding-top: 50px;
+}
+
+.description {
+    font-size: 18px;
+    margin: 20px;
+    text-align: center;
+}
