@@ -9,13 +9,13 @@ h1 {
     text-align: center;
 }
 
-.add_event_button{
+.add_event_button_div{
     display: flex;
     justify-content: center;
     margin-bottom: 4px;
 }
 
-.add-btn {
+#add-event-btn {
     width: 64px;
     height: 64px;
     border-radius: 8px;
@@ -67,3 +67,5 @@ h1 {
     font-size: 0.95rem;
     color: #555;
 }
+
+
