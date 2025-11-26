@@ -24,8 +24,64 @@
         </div>
         <!--Button to add events-->
         <div class="add_event_button_div">
-            <button onclick="alert('here is a message!')" id="add-event-btn">+</button>
+            <button id="add-event-btn">+</button>
         </div>
+        
+
+
+        <!--Pop up form to add events-->
+        <div id="event-form-container">
+        <h2>Add New Event</h2>
+
+        <form id="event-form">
+            <!-- Title -->
+            <label for="event-title">Title</label>
+            <input
+            type="text"
+            id="event-title"
+            name="event-title"
+            placeholder="e.g. Career Fair"
+            required
+            >
+
+            <!-- Date -->
+            <label for="event-date">Date</label>
+            <input
+            type="date"
+            id="event-date"
+            name="event-date"
+            required
+            >
+
+            <!-- Description -->
+            <label for="event-description">Description</label>
+            <textarea
+            id="event-description"
+            name="event-description"
+            rows="4"
+            placeholder="Short description of the event..."
+            required
+            ></textarea>
+
+            <!-- Buttons -->
+            <button type="submit">Save Event</button>
+            <button type="button" id="cancel-event">Cancel</button>
+        </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,14 +115,14 @@
 
 
 
-        <!--Pop up form to add events-->
-        
+
+
        
 
 
 
 
             <!-- Link to external JavaScript file, placed just before closing body tag to ensure the content is already parsed and available when the javascript executes -->
-        <script src="/backend/script.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>

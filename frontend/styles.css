@@ -68,5 +68,13 @@ h1 {
     color: #555;
 }
 
-
+#event-form-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 16px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    display: none; /* hidden by default */
+}
 
