@@ -20,9 +20,7 @@
                 <div class="row g-3 align-items-end">
                     <div class="col-md-4">
                         <label for="user-name" class="form-label">Your name</label>
-
-                        <!-- enter details -->
-                        <input type="text" id="user-name" class="form-control" placeholder="Enter your name..." required>
+                        <input type="text" id="user-name" class="form-control" placeholder="e.g. Cole Cassidy">
                     </div>
                     <div class="col-md-4">
                         <label for="user-role" class="form-label">Role</label>
@@ -33,7 +31,7 @@
                         </select>
                     </div>
                     <div class="col-md-4 text-md-end">
-                        <button id="view-report-btn" class="btn btn-outline-secondary mt-3 d-none">
+                        <button id="view-report-btn" class="btn btn-outline-secondary mt-3 mt-md-0 d-none">
                             View Attendance Report
                         </button>
                     </div>
@@ -42,7 +40,91 @@
             </div>
         </div>
 
-        <!-- events section -->
+        <!-- filters -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-4">
+                        <label for="filter-category" class="form-label">Filter by category</label>
+                        <select id="filter-category" class="form-select">
+                            <option value="">All categories</option>
+                            <option value="Academic">Academic</option>
+                            <option value="Career">Career</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Clubs">Clubs</option>
+                            <option value="Social">Social</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="filter-from" class="form-label">From date</label>
+                        <input type="date" id="filter-from" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <button id="apply-filters" class="btn btn-outline-primary w-100 mt-3 mt-md-0">
+                            Apply Filters
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- add event button -->
+        <div class="text-center mb-3">
+            <button id="add-event-btn" class="btn btn-danger btn-lg">
+                +
+            </button>
+        </div>
+
+        <!-- add/edit event Form -->
+        <div id="event-form-container" class="card mb-4 d-none">
+            <div class="card-body">
+                <h2 class="h5 mb-3" id="event-form-title">Add New Event</h2>
+                <form id="event-form">
+                    <input type="hidden" id="event-id">
+                    <div class="mb-3">
+                        <label for="event-title" class="form-label">Title</label>
+                        <input type="text" id="event-title" required class="form-control" placeholder="e.g. Career Fair">
+                    </div>
+                    <div class="mb-3">
+                        <label for="event-date" class="form-label">Date</label>
+                        <input type="date" id="event-date" required class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="event-category" class="form-label">Category</label>
+                        <select id="event-category" class="form-select" required>
+                            <option value="">Select category</option>
+                            <option value="Academic">Academic</option>
+                            <option value="Career">Career</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Clubs">Clubs</option>
+                            <option value="Social">Social</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="event-description" class="form-label">Description</label>
+                        <textarea id="event-description" rows="3" required class="form-control"
+                            placeholder="Short description of the event..."></textarea>
+                    </div>
+                    <div class="d-flex justify-content-end gap-2">
+                        <button type="button" id="cancel-event" class="btn btn-secondary">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- upcoming rsvp -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2 class="h5">Your Upcoming RSVPs</h2>
+                <div id="my-rsvp-list" class="event-grid"></div>
+                <p id="no-rsvp-msg" class="text-muted small mb-0">No upcoming RSVPs yet.</p>
+            </div>
+        </div>
+
+        <!-- events -->
         <div class="card">
             <div class="card-body">
                 <h2 class="h5 mb-3">All Events</h2>
@@ -52,6 +134,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
