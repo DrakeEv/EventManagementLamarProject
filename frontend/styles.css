@@ -1,28 +1,25 @@
 h1 {
-  text-align: center; 
+  text-align: center;
 }
 
-/*event cards*/
 .event-grid {
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
-  gap: 16px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
 }
 
-/*event displays*/
 .event-card {
   border-radius: 8px;
-  padding: 16px; 
-  background-color: #ffffff; 
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08); 
-  border: 1px solid #e2e2e2; 
+  padding: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #e2e2e2;
 }
 
 .event-card.small-card {
-  padding: 12px; 
+  padding: 12px;
 }
 
-/*add/edit event button*/
 #add-event-btn {
   width: 64px;
   height: 64px;
@@ -32,9 +29,7 @@ h1 {
   line-height: 1;
 }
 
-/*adding/editing event popup*/
 #event-form-container {
   max-width: 700px;
-  margin: 0 auto 1rem auto; 
-  display: none;
+  margin: 0 auto 1rem auto;
 }
