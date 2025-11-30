@@ -7,7 +7,7 @@ HOW TO RUN: (Using UBUNTU)
 Before all, unzip lamarems3, open UBUNTU (or any linux powershell), and open the folder.
 
 The process should look along the lines of:
-1. cd /mnt/c/Users/chi/Downloads
+1. cd /mnt/c/Users/(your user here)/Downloads
 2. cd lamarems3
 
 From there, you will:
