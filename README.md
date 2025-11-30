@@ -1,12 +1,19 @@
 Software Engineering CPSC 4360-01 Group Project by Drake Everett, Chiara Melagrani, Narsico Martinez, and Natalie Romero
 
-Lamar Event System (Lamar EMS) - A web application for students, staff, and professors to create, find, and RSVP for events on campus.
+Lamar Event System (Lamar EMS) Prototype - A web application for students, staff, and professors to create, find, and RSVP for events on campus.
 
 HOW TO RUN: (Using UBUNTU)
-Firstly, open UBUNTU and paste: /mnt/c/Users/(your user)/Downloads$ cd lamarems
-From there, you will unzip the lamarems.zip manually, OR, unzip lamarems file in UBUNTU: /mnt/c/Users/(your user)/Downloads$ unzip lamarems.zip -d lamarems_full
-1. Install dependancies with: npm install
-2. Run the server: node server.js
-Your output should read: Connected to SQLite DB -> Server running on http://localhost:3000
+
+Before all, unzip lamarems3, open UBUNTU (or any linux powershell), and open the folder.
+
+The process should look along the lines of:
+1. cd /mnt/c/Users/chi/Downloads
+2. cd lamarems3
+
+From there, you will:
+
+1. Install dependancies (type/paste): npm install
+2. Run the server (type/paste): node server.js
+Your output should read: Lamar EMS server running on http://localhost:3000
 3. Using your browser, open: http://localhost:3000
-4. You should see the web browser now, and depending on your role (using the drop down), users will be able to find events, create events, and manage events.
+4. You should now have the website running. Log in, and serach through, RSVP, create, or approve/deny events depending on your role.
