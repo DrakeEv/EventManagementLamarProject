@@ -1,5 +1,12 @@
 h1 {
   text-align: center;
+  padding-top: 10px;
+}
+
+.Description {
+  font-size: 18px;
+  margin: 20px;
+  text-align: center;
 }
 
 .event-grid {
@@ -16,8 +23,19 @@ h1 {
   border: 1px solid #e2e2e2;
 }
 
-.event-card.small-card {
-  padding: 12px;
+.event-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.event-card h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.event-card small {
+  color: #666;
 }
 
 #add-event-btn {
