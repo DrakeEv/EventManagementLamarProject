@@ -1,20 +1,25 @@
+/* styles the main page title and centers it at the top */
 h1 {
   text-align: center;
+  /* padding at the top so the title doesnt stick to edge of page */
   padding-top: 10px;
 }
 
+/* styles the tagline/description text below the main title */
 .Description {
   font-size: 18px;
   margin: 20px;
   text-align: center;
 }
 
+/* displays all event cards in a responsive layout */
 .event-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
 }
 
+/* box styling for each individual event card, we went for rounded */
 .event-card {
   border-radius: 8px;
   padding: 16px;
@@ -23,12 +28,14 @@ h1 {
   border: 1px solid #e2e2e2;
 }
 
+/* header shows title + date */
 .event-card-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 
+/* event card title styling */
 .event-card h3 {
   font-size: 1.1rem;
   margin: 0;
@@ -38,6 +45,7 @@ h1 {
   color: #666;
 }
 
+/* + button that appears for organizers/admin */
 #add-event-btn {
   width: 64px;
   height: 64px;
@@ -47,6 +55,7 @@ h1 {
   line-height: 1;
 }
 
+/* event form */
 #event-form-container {
   max-width: 700px;
   margin: 0 auto 1rem auto;
