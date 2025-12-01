@@ -17,3 +17,8 @@ From there, you will:
 Your output should read: Lamar EMS server running on http://localhost:3000
 3. Using your browser, open: http://localhost:3000
 4. You should now have the website running. Log in, and serach through, RSVP, create, or approve/deny events depending on your role.
+
+
+Alternatively: 
+After unzipping the folder, open it and look for index.html and login.html.
+They should open upon clicking and be functional.
