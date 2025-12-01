@@ -1,15 +1,21 @@
 //required dependencies used to run the backend server
-const express = require("express"); // handles the routing, requests, responces, etc. 
-const sqlite3 = require("sqlite3").verbose(); // helps connect to local .db files (where events are stored) with verbose added to help debugging
-const path = require("path"); // to find files in any operating system, makes sure that nothing breaks between filepaths
+
+//for routing, requests, responces, etc. 
+const express = require("express");
+//connect to local .db files where events are stored 
+const sqlite3 = require("sqlite3").verbose();
+//to find files in any operating system
+const path = require("path"); 
 
 //create the express server set up
 const app = express();
-const PORT = 3000; //port we will use to host local server (standard port)
+//port used for local server
+const PORT = 3000; 
 
 //middleware for JSON files as well as API calls, necessary for POST requests
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "frontend"))); //static frontend for HTML, CSS, and JS. allows us to open everything in any browser as long as the server is running
+//static frontend for HTML, CSS, and JS which allows lamar ems to open in any browser as long as the server is running
+app.use(express.static(path.join(__dirname, "frontend")));
 
 //database connection using sqlite, creates files if they arent already existing (again, where events are stored. it creates a file to do so)
 const db = new sqlite3.Database(path.join(__dirname, "events.db"));
@@ -34,12 +40,16 @@ db.serialize(() => {
 
 //api endpoints and routes so the user will be sent to the page when they go to the url
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "index.html")); //loads page when someone enters url
+  //loads page when url entered by user
+  res.sendFile(path.join(__dirname, "frontend", "index.html"));
 });
 
 //student role limitations that forces student conditions under student role
-app.get("/api/events", (req, res) => { //safety mode for the student role for approved events
-  const { category, from, role } = req.query; //tells the system what role is active
+
+//safety mode for the student role for approved events
+app.get("/api/events", (req, res) => { 
+  //tells the system what role is active
+  const { category, from, role } = req.query;
   const isStudent = role === "student";
   const params = [];
   let where = []; 
@@ -71,7 +81,8 @@ app.get("/api/events", (req, res) => { //safety mode for the student role for ap
   });
 });
 
-//lets organizers or admins create new events once an event is submitted and enters them into events.db
+//where organizers/admins create new events 
+//once an event is submitted they are put into events.db
 app.post("/api/events", (req, res) => {
   const { title, date, description, category } = req.body;
   db.run(
@@ -82,7 +93,8 @@ app.post("/api/events", (req, res) => {
         console.error(err);
         res.status(500).json({ error: "Failed to create event" });
       } else {
-        res.json({ id: this.lastID }); //sends info to the database by ID and saves to the grid
+        //sends info to the database by ID and saves to the grid
+        res.json({ id: this.lastID });
       }
     }
   );
@@ -167,7 +179,7 @@ app.post("/api/events/:id/cancel-rsvp", (req, res) => {
   );
 });
 
-//start the server using node.js
+//starting the server using node.js
 app.listen(PORT, () => {
   console.log(`Lamar EMS server running on http://localhost:${PORT}`); //how we know the server successfully is running and the url is ready to use
 });
